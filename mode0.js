@@ -5,6 +5,7 @@
 const fs = require('fs')
 const dictionary = "./dictionary.txt"
 var passwordfile = "./passwordfile.txt"
+var successfile = "./complete.txt"
 var debug = true
 
 function debug(msg) {
