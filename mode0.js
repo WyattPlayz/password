@@ -11,6 +11,13 @@ function debug(msg) {
   console.log('[DEBUG] ' + msg)
 }
 
+function success(hash, pass) {
+  fs.appendFile(successfile, hash + ':' + pass, (err) => {
+    if (err) throw err;
+    debug('appended to success file ')
+  });
+}
+
 var hashes = fs.readFileSync(passwordfile).toString().split("\n");
 var passwords = fs.readFileSync(dictionary).toString().split("\n");
 
